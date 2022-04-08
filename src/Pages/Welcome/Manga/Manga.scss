@@ -1,0 +1,45 @@
+@import "/src/Styles/mixin.scss";
+
+.Manga {
+  @include col;
+  @include center;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100%;
+  height: auto;
+  margin-bottom: 5%;
+  &Top {
+    @include col;
+    @include center;
+    width: 90%;
+    text-align: center;
+    &H {
+      font-family: "Fredoka One", cursive;
+      font-size: 80px;
+      font-weight: bolder;
+      margin-bottom: 10px;
+      @media (max-width: 1200px) {
+        font-size: 60px;
+      }
+      @media (max-width: 1000px) {
+        font-size: 50px;
+      }
+      @media (max-width: 800px) {
+        font-size: 40px;
+      }
+    }
+    &Span {
+      font-family: "Fredoka One", cursive;
+      font-size: 34px;
+      font-weight: bold;
+      color: #ff8fc7;
+      margin-bottom: 4%;
+      @media (max-width: 1000px) {
+        font-size: 25px;
+      }
+      @media (max-width: 800px) {
+        font-size: 20px;
+      }
+    }
+  }
+}
