@@ -1,0 +1,13 @@
+@import "/src/Styles/mixin.scss";
+
+.Button {
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 10px;
+  width: auto;
+  border: none;
+  &Icon {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+}

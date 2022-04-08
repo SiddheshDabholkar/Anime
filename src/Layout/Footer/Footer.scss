@@ -4,6 +4,9 @@
   @include row;
   @include center;
   width: 100%;
-  background: blue;
-  padding: 2%;
+  padding: 2% 0%;
+  &Name {
+    font-size: 12px;
+    color: #fff;
+  }
 }

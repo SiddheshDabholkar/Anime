@@ -1,0 +1,11 @@
+@import "/src/Styles/mixin.scss";
+
+.Home {
+  @include col;
+  @include center;
+  &Top {
+    width: 100%;
+    @include row;
+    @include center;
+  }
+}
