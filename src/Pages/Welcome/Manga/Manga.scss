@@ -30,15 +30,14 @@
     }
     &Span {
       font-family: "Fredoka One", cursive;
-      font-size: 34px;
-      font-weight: bold;
+      font-size: 25px;
       color: #ff8fc7;
       margin-bottom: 4%;
       @media (max-width: 1000px) {
-        font-size: 25px;
+        font-size: 22px;
       }
       @media (max-width: 800px) {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
   }
