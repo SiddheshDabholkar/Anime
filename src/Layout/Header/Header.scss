@@ -1,0 +1,25 @@
+@import "/src/Styles/mixin.scss";
+
+.Header {
+  @include row;
+  @include center;
+  width: 100%;
+  height: 60px;
+  background: blue;
+  &Left {
+    width: 20%;
+    height: 100%;
+    @include row;
+    @include center;
+    &Name {
+      font-size: 25px;
+      font-family: "Days One", sans-serif;
+    }
+  }
+  &Right {
+    height: 100%;
+    width: 80%;
+    @include row;
+    @include center;
+  }
+}

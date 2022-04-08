@@ -1,0 +1,9 @@
+@import "/src/Styles/mixin.scss";
+
+.Footer {
+  @include row;
+  @include center;
+  width: 100%;
+  background: blue;
+  padding: 2%;
+}
