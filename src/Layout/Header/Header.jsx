@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <nav className="Header">
       <div className="HeaderLeft">
-        <span className="HeaderLeftName">Anime</span>
+        <span className="HeaderLeftName">Find Anime</span>
       </div>
       <div className="HeaderRight">
         <BsFillVolumeDownFill className="icons" />

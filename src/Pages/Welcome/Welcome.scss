@@ -1,0 +1,7 @@
+@import "/src/Styles/mixin.scss";
+
+.Welcome {
+  @include col;
+  @include center;
+  width: 100%;
+}
