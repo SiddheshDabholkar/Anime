@@ -13,45 +13,45 @@
     width: 80%;
     &H {
       color: #fff;
-      font-size: 100px;
+      font-size: 90px;
       font-family: "Days One", sans-serif;
       font-weight: bolder;
       @media (max-width: 1200px) {
         margin-top: 10%;
-        font-size: 90px;
+        font-size: 80px;
       }
       @media (max-width: 1100px) {
         margin-top: 10%;
-        font-size: 80px;
+        font-size: 70px;
       }
       @media (max-width: 900px) {
         margin-top: 10%;
-        font-size: 70px;
+        font-size: 60px;
       }
       @media (max-width: 500px) {
         margin-top: 10%;
-        font-size: 60px;
+        font-size: 50px;
       }
     }
     &H2 {
       color: #adadad;
-      font-size: 55px;
+      font-size: 45px;
       font-family: "Days One", sans-serif;
       @media (max-width: 1200px) {
         margin-top: 10%;
-        font-size: 40px;
+        font-size: 35px;
       }
       @media (max-width: 1100px) {
         margin-top: 10%;
-        font-size: 35px;
+        font-size: 30px;
       }
       @media (max-width: 900px) {
         margin-top: 10%;
-        font-size: 30px;
+        font-size: 25px;
       }
       @media (max-width: 500px) {
         margin-top: 10%;
-        font-size: 25px;
+        font-size: 20px;
       }
     }
     &Button {
