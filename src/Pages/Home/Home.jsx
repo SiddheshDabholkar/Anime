@@ -13,6 +13,7 @@ export default function Home() {
   const handleQueryChange = (e) => {
     setQuery(e.target.value);
   };
+
   const fetchFilms = async () => {
     try {
       const fetchingFilms = await fetch(
@@ -20,6 +21,7 @@ export default function Home() {
       );
       const result = await fetchingFilms.json();
       setFilms(result);
+      setSearchedFilm(result);
     } catch (error) {
       setError(error);
     }
@@ -30,24 +32,37 @@ export default function Home() {
   }, []);
 
   const filterSearchedAnime = (query) => {
-    return films.filter((f) => {
-      if (f.title.toString().toLowerCase().includes(query)) {
-        return f;
-      }
-    });
+    if (query.length === 0) {
+      return films;
+    } else {
+      return films.filter((f) => {
+        if (f.title.toString().toLowerCase().includes(query)) {
+          return f;
+        }
+      });
+    }
   };
 
-  const handleSearch = () => {
-    console.log(query, filterSearchedAnime(query));
+  useEffect(() => {
     setSearchedFilm(filterSearchedAnime(query));
-  };
+  }, [query]);
+
+  // const handleSearch = () => {
+  //   console.log(query, filterSearchedAnime(query));
+  //   setSearchedFilm(filterSearchedAnime(query));
+  // };
 
   return (
     <div className="Home">
       <div className="HomeTop">
         <Input value={query} onChange={handleQueryChange} />
-        <Button onClick={handleSearch} />
+        {/* <Button onClick={handleSearch} /> */}
       </div>
+      {searchedFilm.length === 0 && (
+        <div className="HomeMid">
+          <h1>Try with different keyword or check your internet connection</h1>
+        </div>
+      )}
       <div className="HomeBottom">
         {searchedFilm.map((s) => (
           <Card key={s.id} data={s} />
