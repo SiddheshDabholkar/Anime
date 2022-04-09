@@ -1,0 +1,35 @@
+@import "/src/Styles/mixin.scss";
+
+.Skeleton {
+  @include col;
+  margin: 3% 2%;
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #072058;
+  border-radius: 10px;
+  min-width: 22%;
+  @media (max-width: 900px) {
+    width: 45%;
+  }
+  @media (max-width: 500px) {
+    width: 90%;
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: 0;
+    height: 100%;
+    min-width: 22%;
+    @media (max-width: 900px) {
+      width: 45%;
+    }
+    @media (max-width: 500px) {
+      width: 90%;
+    }
+    @include skeletonAnimation(#000092);
+  }
+}
