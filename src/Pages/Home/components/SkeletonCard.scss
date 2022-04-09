@@ -1,0 +1,50 @@
+@import "/src/Styles/mixin.scss";
+
+@keyframes gradientAnimation {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.Skeleton {
+  @include col;
+  margin: 3% 2%;
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #072058;
+  border-radius: 10px;
+  min-width: 22%;
+  @media (max-width: 900px) {
+    width: 45%;
+  }
+  @media (max-width: 500px) {
+    width: 90%;
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: 0;
+    height: 100%;
+    min-width: 22%;
+    @media (max-width: 900px) {
+      width: 45%;
+    }
+    @media (max-width: 500px) {
+      width: 90%;
+    }
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      #000092 50%,
+      transparent 100%
+    );
+    animation: gradientAnimation 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+}

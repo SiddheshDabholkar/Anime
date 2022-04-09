@@ -3,11 +3,13 @@ import "./Home.scss";
 import Input from "../../Components/Input/Input";
 import Button from "../../Components/Button/Button";
 import Card from "./components/Card";
+import SkeletonCard from "./components/SkeletonCard";
 
 export default function Home() {
   const [query, setQuery] = useState("");
   const [films, setFilms] = useState([]);
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
   const [searchedFilm, setSearchedFilm] = useState([]);
 
   const handleQueryChange = (e) => {
@@ -16,13 +18,16 @@ export default function Home() {
 
   const fetchFilms = async () => {
     try {
+      setIsLoading(true);
       const fetchingFilms = await fetch(
         "https://ghibliapi.herokuapp.com/films"
       );
       const result = await fetchingFilms.json();
       setFilms(result);
       setSearchedFilm(result);
+      setIsLoading(false);
     } catch (error) {
+      setIsLoading(false);
       setError(error);
     }
   };
@@ -58,15 +63,21 @@ export default function Home() {
         <Input value={query} onChange={handleQueryChange} />
         {/* <Button onClick={handleSearch} /> */}
       </div>
-      {searchedFilm.length === 0 && (
+      {error && <div className="HomeMid">Something went wrong</div>}
+      {!isLoading && searchedFilm.length === 0 && (
         <div className="HomeMid">
           <h1>Try with different keyword or check your internet connection</h1>
         </div>
       )}
       <div className="HomeBottom">
-        {searchedFilm.map((s) => (
-          <Card key={s.id} data={s} />
-        ))}
+        {isLoading && (
+          <>
+            <SkeletonCard />
+            <SkeletonCard />
+            <SkeletonCard />
+          </>
+        )}
+        {!isLoading && searchedFilm.map((s) => <Card key={s.id} data={s} />)}
       </div>
     </div>
   );
