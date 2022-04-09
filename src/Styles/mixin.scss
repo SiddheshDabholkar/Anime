@@ -19,3 +19,22 @@
   -webkit-box-shadow: -5px -1px 78px 0px $color;
   -moz-box-shadow: -5px -1px 78px 0px $color;
 }
+
+@keyframes gradientAnimation {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@mixin skeletonAnimation($color) {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    $color 50%,
+    transparent 100%
+  );
+  animation: gradientAnimation 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}

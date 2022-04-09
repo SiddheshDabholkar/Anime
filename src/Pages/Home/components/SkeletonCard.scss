@@ -1,14 +1,5 @@
 @import "/src/Styles/mixin.scss";
 
-@keyframes gradientAnimation {
-  from {
-    left: 0%;
-  }
-  to {
-    left: 100%;
-  }
-}
-
 .Skeleton {
   @include col;
   margin: 3% 2%;
@@ -39,12 +30,6 @@
     @media (max-width: 500px) {
       width: 90%;
     }
-    background: linear-gradient(
-      to right,
-      transparent 0%,
-      #000092 50%,
-      transparent 100%
-    );
-    animation: gradientAnimation 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    @include skeletonAnimation(#000092);
   }
 }

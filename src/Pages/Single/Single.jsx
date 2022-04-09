@@ -32,7 +32,20 @@ export default function Single() {
   }, [id]);
 
   if (loading) {
-    return <h1>loading...</h1>;
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "20px",
+          color: "silver",
+        }}
+      >
+        <h1>loading...</h1>
+      </div>
+    );
   }
 
   const {
@@ -62,16 +75,8 @@ export default function Single() {
           </div>
         </div>
         <div className="SingleTop">
-          <img
-            className="SingleTopBg"
-            alt="background "
-            src="https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
-          />
-          <img
-            className="SingleTopAvatar"
-            alt="movie"
-            src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg"
-          />
+          <img className="SingleTopBg" alt="background " src={movie_banner} />
+          <img className="SingleTopAvatar" alt="movie" src={image} />
         </div>
         <div className="SingleMid">
           <div className="SingleMidTop">
