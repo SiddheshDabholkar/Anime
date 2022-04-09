@@ -10,9 +10,6 @@ export default function Home() {
   const [error, setError] = useState("");
   const [searchedFilm, setSearchedFilm] = useState([]);
 
-  console.log("films", films);
-  console.log("searchedFilm", searchedFilm);
-
   const fetchFilms = async () => {
     try {
       const fetchingFilms = await fetch(

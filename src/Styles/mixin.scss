@@ -13,3 +13,9 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin shadow($color) {
+  box-shadow: -5px -1px 78px 0px $color;
+  -webkit-box-shadow: -5px -1px 78px 0px $color;
+  -moz-box-shadow: -5px -1px 78px 0px $color;
+}
