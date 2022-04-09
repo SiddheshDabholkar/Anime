@@ -8,4 +8,10 @@
     @include row;
     @include center;
   }
+  &Bottom {
+    @include row;
+    @include center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
 }
