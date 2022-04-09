@@ -8,6 +8,10 @@
     @include row;
     @include center;
   }
+  &Mid {
+    height: 70vh;
+    color: silver;
+  }
   &Bottom {
     @include row;
     @include center;
