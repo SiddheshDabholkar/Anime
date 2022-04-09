@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.scss";
-import { BsFillVolumeDownFill, BsSunFill } from "react-icons/bs";
+// import { BsFillVolumeDownFill, BsSunFill } from "react-icons/bs";
 
 export default function Header() {
   return (
@@ -8,10 +8,10 @@ export default function Header() {
       <div className="HeaderLeft">
         <span className="HeaderLeftName">Find Anime</span>
       </div>
-      <div className="HeaderRight">
+      {/* <div className="HeaderRight">
         <BsFillVolumeDownFill className="icons" />
         <BsSunFill className="icons" />
-      </div>
+      </div> */}
     </nav>
   );
 }

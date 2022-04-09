@@ -10,6 +10,9 @@ export default function Home() {
   const [error, setError] = useState("");
   const [searchedFilm, setSearchedFilm] = useState([]);
 
+  const handleQueryChange = (e) => {
+    setQuery(e.target.value);
+  };
   const fetchFilms = async () => {
     try {
       const fetchingFilms = await fetch(
@@ -23,13 +26,8 @@ export default function Home() {
   };
 
   useEffect(() => {
-    console.log("bruh i am running");
     fetchFilms();
   }, []);
-
-  const handleQueryChange = (e) => {
-    setQuery(e.target.value);
-  };
 
   const filterSearchedAnime = (query) => {
     return films.filter((f) => {
@@ -40,6 +38,7 @@ export default function Home() {
   };
 
   const handleSearch = () => {
+    console.log(query, filterSearchedAnime(query));
     setSearchedFilm(filterSearchedAnime(query));
   };
 
