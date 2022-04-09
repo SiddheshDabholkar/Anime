@@ -4,7 +4,6 @@
   @include col;
   @include center;
   width: 100%;
-
   .Single {
     background: rgb(0, 4, 66);
     @include col;
@@ -27,6 +26,9 @@
         &Icon {
           font-size: 25px;
           color: cyan;
+          @media (max-width: 900px) {
+            font-size: 18px;
+          }
         }
       }
     }
@@ -65,17 +67,30 @@
         @include center;
         align-items: stretch;
         width: 100%;
+        @media (max-width: 1005px) {
+          flex-direction: column-reverse;
+        }
         &Left {
           @include center;
           @include col;
-          padding: 14% 2% 2% 2%;
+          padding: 18% 2% 2% 2%;
           width: 40%;
+          @media (max-width: 1005px) {
+            padding: 15% 2%;
+            width: 100%;
+          }
           &Item {
             @include row;
             width: 100%;
+            margin: 5px;
             text-align: start;
             font-size: 22px;
             color: #067eff;
+            @media (max-width: 1005px) {
+              font-size: 18px;
+              @include center;
+              text-align: center;
+            }
           }
         }
         &Right {
@@ -84,10 +99,17 @@
           text-align: center;
           width: 60%;
           padding: 5%;
+          @media (max-width: 1005px) {
+            padding-top: 20%;
+            width: 90%;
+          }
           &Title {
             font-family: "Days One", sans-serif;
             font-size: 30px;
             font-weight: bold;
+            @media (max-width: 900px) {
+              font-size: 26px;
+            }
           }
           &Span {
             margin-top: 10px;
@@ -97,6 +119,9 @@
             width: 100%;
             font-size: 30px;
             font-weight: bolder;
+            @media (max-width: 900px) {
+              font-size: 24px;
+            }
             &Icon {
               padding: 5px;
             }
@@ -106,6 +131,9 @@
             font-size: 20px;
             color: silver;
             font-weight: bolder;
+            @media (max-width: 900px) {
+              font-size: 16px;
+            }
           }
         }
       }

@@ -1,9 +1,8 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Single.scss";
-import { BsFillCameraReelsFill, BsFillClockFill } from "react-icons/bs";
+import { BsFillClockFill } from "react-icons/bs";
 import Gradient from "rgt";
-import { MdMovieCreation } from "react-icons/md";
 import { BiArrowBack } from "react-icons/bi";
 
 export default function Single() {
@@ -78,7 +77,7 @@ export default function Single() {
           <div className="SingleMidTop">
             <div className="SingleMidTopLeft">
               <span className="SingleMidTopLeftItem">
-                <b>titile :</b>
+                <b>title :</b>
                 {title}
               </span>
               <span className="SingleMidTopLeftItem">
