@@ -42,3 +42,7 @@ code {
 ::-webkit-scrollbar-thumb:hover {
   background: #ee00ff;
 }
+
+a{
+  text-decoration: none;
+}
